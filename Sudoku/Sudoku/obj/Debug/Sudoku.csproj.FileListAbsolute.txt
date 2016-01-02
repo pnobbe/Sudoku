@@ -1,0 +1,16 @@
+c:\users\patri\documents\visual studio 2015\Projects\Sudoku\Sudoku\bin\Debug\Sudoku.exe.config
+C:\Users\patri\Documents\Visual Studio 2015\Projects\Sudoku\Sudoku\bin\Debug\Sudoku.exe
+C:\Users\patri\Documents\Visual Studio 2015\Projects\Sudoku\Sudoku\bin\Debug\Sudoku.pdb
+C:\Users\patri\Documents\Visual Studio 2015\Projects\Sudoku\Sudoku\obj\Debug\Sudoku.csprojResolveAssemblyReference.cache
+C:\Users\patri\Documents\Visual Studio 2015\Projects\Sudoku\Sudoku\obj\Debug\MainWindow.g.cs
+C:\Users\patri\Documents\Visual Studio 2015\Projects\Sudoku\Sudoku\obj\Debug\App.g.cs
+C:\Users\patri\Documents\Visual Studio 2015\Projects\Sudoku\Sudoku\obj\Debug\Sudoku_MarkupCompile.cache
+C:\Users\patri\Documents\Visual Studio 2015\Projects\Sudoku\Sudoku\obj\Debug\Sudoku_MarkupCompile.lref
+C:\Users\patri\Documents\Visual Studio 2015\Projects\Sudoku\Sudoku\obj\Debug\MainWindow.baml
+C:\Users\patri\Documents\Visual Studio 2015\Projects\Sudoku\Sudoku\obj\Debug\Sudoku.g.resources
+C:\Users\patri\Documents\Visual Studio 2015\Projects\Sudoku\Sudoku\obj\Debug\Sudoku.Properties.Resources.resources
+C:\Users\patri\Documents\Visual Studio 2015\Projects\Sudoku\Sudoku\obj\Debug\Sudoku.csproj.GenerateResource.Cache
+C:\Users\patri\Documents\Visual Studio 2015\Projects\Sudoku\Sudoku\obj\Debug\Sudoku.exe
+C:\Users\patri\Documents\Visual Studio 2015\Projects\Sudoku\Sudoku\obj\Debug\Sudoku.pdb
+C:\Users\patri\Documents\Visual Studio 2015\Projects\Sudoku\Sudoku\bin\Debug\Wrapper.dll
+C:\Users\patri\Documents\Visual Studio 2015\Projects\Sudoku\Sudoku\bin\Debug\Wrapper.pdb
