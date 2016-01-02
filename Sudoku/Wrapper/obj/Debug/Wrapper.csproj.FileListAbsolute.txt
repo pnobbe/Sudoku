@@ -5,3 +5,9 @@ C:\Users\patri\Documents\Visual Studio 2015\Projects\Sudoku\Wrapper\obj\Debug\Wr
 C:\Users\patri\Documents\Visual Studio 2015\Projects\Sudoku\Wrapper\obj\Debug\Wrapper.dll
 C:\Users\patri\Documents\Visual Studio 2015\Projects\Sudoku\Wrapper\obj\Debug\Wrapper.pdb
 C:\Users\patri\Documents\Visual Studio 2015\Projects\Sudoku\Wrapper\obj\Debug\Wrapper.csprojResolveAssemblyReference.cache
+C:\Users\patri\Documents\GitHub\Sudoku\Sudoku\Wrapper\bin\Debug\Wrapper.dll
+C:\Users\patri\Documents\GitHub\Sudoku\Sudoku\Wrapper\bin\Debug\Wrapper.pdb
+C:\Users\patri\Documents\GitHub\Sudoku\Sudoku\Wrapper\obj\Debug\Interop.Sudoku.dll
+C:\Users\patri\Documents\GitHub\Sudoku\Sudoku\Wrapper\obj\Debug\Wrapper.csproj.ResolveComReference.cache
+C:\Users\patri\Documents\GitHub\Sudoku\Sudoku\Wrapper\obj\Debug\Wrapper.dll
+C:\Users\patri\Documents\GitHub\Sudoku\Sudoku\Wrapper\obj\Debug\Wrapper.pdb

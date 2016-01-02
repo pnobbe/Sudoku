@@ -1,21 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Wrapper
 {
     public class SudokuWrapper
-    {
-
+    { 
         private Sudoku.Game _game = new Sudoku.Game();
 
         public SudokuWrapper()
         {
             _game.create();
-            GetMap_DataView();
+           // GetMap_DataView();
         }
 
         public List<List<int>> GetMap_Matrix()
@@ -35,7 +31,7 @@ namespace Wrapper
             return _map;
         }
 
-        public DataView GetMap_DataView()
+        /*public DataView GetMap_DataView()
         {
             List<List<int>> l = GetMap_Matrix();
             DataTable table = new DataTable();
@@ -66,7 +62,7 @@ namespace Wrapper
             }
 
             return table.AsDataView();
-        }
+        }*/
 
         public void printMap(List<List<int>> map)
         {

@@ -1,7 +1,7 @@
 ﻿using System.Windows;
 using Wrapper;
 
-namespace Sudoku
+namespace WPFSudoku
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -11,8 +11,6 @@ namespace Sudoku
         public MainWindow()
         {
             InitializeComponent();
-            SudokuWrapper sudoku = new SudokuWrapper();
-            MainGrid.ShowGridLines = true;
         }
     }
 }
