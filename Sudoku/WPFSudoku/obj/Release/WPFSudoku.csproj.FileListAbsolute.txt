@@ -1,0 +1,16 @@
+C:\Users\patri\Documents\GitHub\Sudoku\Sudoku\WPFSudoku\bin\Release\WPFSudoku.exe.config
+C:\Users\patri\Documents\GitHub\Sudoku\Sudoku\WPFSudoku\bin\Release\WPFSudoku.exe
+C:\Users\patri\Documents\GitHub\Sudoku\Sudoku\WPFSudoku\bin\Release\WPFSudoku.pdb
+C:\Users\patri\Documents\GitHub\Sudoku\Sudoku\WPFSudoku\bin\Release\Wrapper.dll
+C:\Users\patri\Documents\GitHub\Sudoku\Sudoku\WPFSudoku\bin\Release\Wrapper.pdb
+C:\Users\patri\Documents\GitHub\Sudoku\Sudoku\WPFSudoku\obj\Release\WPFSudoku.csprojResolveAssemblyReference.cache
+C:\Users\patri\Documents\GitHub\Sudoku\Sudoku\WPFSudoku\obj\Release\MainWindow.g.cs
+C:\Users\patri\Documents\GitHub\Sudoku\Sudoku\WPFSudoku\obj\Release\App.g.cs
+C:\Users\patri\Documents\GitHub\Sudoku\Sudoku\WPFSudoku\obj\Release\WPFSudoku_MarkupCompile.cache
+C:\Users\patri\Documents\GitHub\Sudoku\Sudoku\WPFSudoku\obj\Release\WPFSudoku_MarkupCompile.lref
+C:\Users\patri\Documents\GitHub\Sudoku\Sudoku\WPFSudoku\obj\Release\MainWindow.baml
+C:\Users\patri\Documents\GitHub\Sudoku\Sudoku\WPFSudoku\obj\Release\WPFSudoku.g.resources
+C:\Users\patri\Documents\GitHub\Sudoku\Sudoku\WPFSudoku\obj\Release\WPFSudoku.Properties.Resources.resources
+C:\Users\patri\Documents\GitHub\Sudoku\Sudoku\WPFSudoku\obj\Release\WPFSudoku.csproj.GenerateResource.Cache
+C:\Users\patri\Documents\GitHub\Sudoku\Sudoku\WPFSudoku\obj\Release\WPFSudoku.exe
+C:\Users\patri\Documents\GitHub\Sudoku\Sudoku\WPFSudoku\obj\Release\WPFSudoku.pdb
