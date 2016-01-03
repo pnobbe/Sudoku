@@ -11,3 +11,4 @@ C:\Users\patri\Documents\GitHub\Sudoku\Sudoku\Wrapper\obj\Debug\Interop.Sudoku.d
 C:\Users\patri\Documents\GitHub\Sudoku\Sudoku\Wrapper\obj\Debug\Wrapper.csproj.ResolveComReference.cache
 C:\Users\patri\Documents\GitHub\Sudoku\Sudoku\Wrapper\obj\Debug\Wrapper.dll
 C:\Users\patri\Documents\GitHub\Sudoku\Sudoku\Wrapper\obj\Debug\Wrapper.pdb
+C:\Users\patri\Documents\GitHub\Sudoku\Sudoku\Wrapper\obj\Debug\Wrapper.csprojResolveAssemblyReference.cache

@@ -1,31 +1,34 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 
 namespace Wrapper
 {
     public class SudokuWrapper
-    { 
+    {
         private Sudoku.Game _game = new Sudoku.Game();
 
         public SudokuWrapper()
         {
+
+
             _game.create();
-           // GetMap_DataView();
+            printMap(GetMap_Matrix());
         }
 
         public List<List<int>> GetMap_Matrix()
         {
             var _map = new List<List<int>>();
 
-            for (int x = 0; x < 9; x++)
+            for (int y = 0; y < 9; y++)
             {
                 _map.Add(new List<int>());
-                for (int y = 0; y < 9; y++)
+                for (int x = 0; x < 9; x++)
                 {
                     short toAdd = 0;
                     _game.get((short)(x + 1), (short)(y + 1), out toAdd);
-                    _map.ElementAt(x).Add(toAdd);
+                    _map.ElementAt(y).Add(toAdd);
                 }
             }
             return _map;
@@ -66,27 +69,85 @@ namespace Wrapper
 
         public void printMap(List<List<int>> map)
         {
+            Debug.WriteLine("____________________");
             foreach (List<int> x in map)
             {
                 foreach (int y in x)
                 {
-                    Console.Write(y + " ");
+                    Debug.Write(y + " ");
                 }
-                Console.WriteLine();
+                Debug.WriteLine("");
             }
+            Debug.WriteLine("____________________");
+
+        }
+
+        public void Cheat()
+        {
+            int zeroCount = 0;
+            foreach (var y in GetMap_Matrix())
+            {
+                foreach (var x in y)
+                {
+                    if (x == 0)
+                        zeroCount++;
+                }
+            }
+
+            foreach (var y in GetMap_Matrix())
+            {
+
+                foreach (var x in y)
+                {
+                    short yCord = 0;
+                    short xCord = 0;
+                    short val = 0;
+                    int suc = 0;
+
+                    if (zeroCount > 2)
+                    {
+                        _game.hint(out xCord, out yCord, out val, out suc);
+                        if (suc == 1)
+                        {
+                            SetValue(yCord - 1, xCord - 1, val);
+                        }
+                        zeroCount--;
+                    }
+                }
+            }
+
         }
 
         public Boolean SetValue(int x, int y, int value)
         {
             int succeeded = 1;
-            _game.set((short)(x + 1), (short)(y + 1), (short)value, out succeeded);
+            _game.set((short)(y + 1), (short)(x + 1), (short)value, out succeeded);
+
+            printMap(GetMap_Matrix());
 
             if (succeeded == 0)
             {
-                Console.WriteLine("Could not set value [" + value + "] on position [" + x + ", " + y + "]");
+                Debug.WriteLine("Could not set value [" + value + "] on position [" + x + ", " + y + "]");
                 return false;
             }
             return true;
+        }
+
+        public Boolean isFinished()
+        {
+            if (isValid())
+            {
+                foreach (var y in GetMap_Matrix())
+                {
+                    foreach (var x in y)
+                    {
+                        if (x == 0)
+                            return false;
+                    }
+                }
+                return true;
+            }
+            return false;
         }
 
         public Boolean isValid()
@@ -97,7 +158,7 @@ namespace Wrapper
 
             if (succeeded == 0)
             {
-                Console.WriteLine("Invalid answer");
+                Debug.WriteLine("Invalid answer");
                 return false;
             }
             return true;

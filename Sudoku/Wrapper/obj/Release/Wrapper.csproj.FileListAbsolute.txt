@@ -1,0 +1,6 @@
+C:\Users\patri\Documents\GitHub\Sudoku\Sudoku\Wrapper\bin\Release\Wrapper.dll
+C:\Users\patri\Documents\GitHub\Sudoku\Sudoku\Wrapper\bin\Release\Wrapper.pdb
+C:\Users\patri\Documents\GitHub\Sudoku\Sudoku\Wrapper\obj\Release\Interop.Sudoku.dll
+C:\Users\patri\Documents\GitHub\Sudoku\Sudoku\Wrapper\obj\Release\Wrapper.csproj.ResolveComReference.cache
+C:\Users\patri\Documents\GitHub\Sudoku\Sudoku\Wrapper\obj\Release\Wrapper.dll
+C:\Users\patri\Documents\GitHub\Sudoku\Sudoku\Wrapper\obj\Release\Wrapper.pdb

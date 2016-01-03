@@ -1,0 +1,191 @@
+﻿@model Wrapper.SudokuWrapper
+<div class="container">
+    <div class="col-lg-9">
+        <label class="page-header">Sudoku!</label>
+    </div>
+    <div class="col-lg-9">
+        @{ int count = 0;}
+        @{ int xcount = -1;}
+        @{ int ycount = -1;}
+        @foreach (var y in Model.GetMap_Matrix())
+        {
+            xcount++;
+            ycount = -1;
+            foreach (var x in y)
+            {
+                ycount++;
+                count++;
+                if ((count - 1) % 3 == 0 && count != 1)
+                {
+                    <div class="dividerVert"></div>
+                }
+                if ((count - 1) % 27 == 0)
+                {
+                    <div class="dividerHor"></div>
+                }
+                if (x != 0)
+                {
+                    <div class="col-lg-1">
+                        <input class="inputbox" id="@count" type="text" disabled="disabled" value="@x">
+                    </div>
+                }
+                else
+                {
+                    <div class="col-lg-1">
+                        <input class="inputbox" id="@count" style="background-color: " type="number" onkeyup="validate(this, @ycount, @xcount, @count)" max="9" min="1">
+                    </div>
+                }
+            }
+        }
+    </div>
+    <div class="col-lg-9">
+        @{ int attempts = 0; }
+        <label id="attemptId" style="margin-top: 10px;">Attempts: @attempts</label>
+    </div>
+    <div class="leftFloat">
+        <div class="col-lg-8">
+            <label class="page-header">Menu</label>
+        </div>
+        <div class="col-lg-8">
+            @using (Html.BeginForm("NewGame", "Home"))
+            {
+                <input type="submit" class="orange-flat-button" id="newGameButton" value="New game!" />
+            }
+        </div>
+        <div class="col-lg-8">
+            @using (Html.BeginForm("Cheat", "Home"))
+            {
+                <input type="submit" class="emerald-flat-button" id="cheatButton" value="Cheat!" />
+            }
+        </div>
+    </div>
+</div>
+<script>
+    var counter = 0;
+    function validate(object, xinput, yinput, count) {
+        if (object.value.length > 1) {
+            if (object.value.charAt(0) != object.value.charAt(1)) {
+                counter++;
+            }
+            object.value = object.value.slice(1, 2)
+        }
+        else if (object.value == "") {
+            object.value = 0;
+        }
+        else {
+            counter++;
+        }
+
+        $.ajax({
+            type: "GET",
+            url: '@Url.Action("Validate", "Home")',
+            data: { x: xinput, y: yinput, value: object.value },
+            contentType: "application/json; charset=utf-8",
+            async: false,
+            dataType: "json",
+            success: function (msg) {
+
+                document.getElementById("attemptId").innerText = "Attempts: " + counter;
+                if (msg.status == "Finished") {
+                    finish();
+                    document.getElementById(count).style.backgroundColor = "#9FF781";
+                    return;
+                }
+
+                if (msg.status == "Valid" && object.value != 0) {
+                    document.getElementById(count).style.backgroundColor = "#9FF781";
+                }
+                else {
+                    document.getElementById(count).removeAttribute("style");
+                }
+
+                if (msg.status == "Failed to validate") {
+                    if (object.value != 0) {
+                        document.getElementById(count).style.backgroundColor = "#f39c12";
+                    }
+                    else {
+                        document.getElementById(count).removeAttribute("style");
+                    }
+                }
+
+                if (msg.status == "Failed to set value") {
+                    alert("Failed to set the value correctly, please try entering it again.")
+                    document.getElementById(count).style.backgroundColor = "#FE2E2E";
+                }
+
+            },
+            error: function (e) {
+                alert("Communication error, please refresh the page.")
+                document.getElementById(count).style.backgroundColor = "#FE2E2E";
+            }
+        });
+
+        if (object.value == "0") {
+            object.value = object.value.slice(0, 0)
+            return;
+        }
+
+    }
+
+    function finish() {
+        @{int i = 0;}
+        @foreach (var y in Model.GetMap_Matrix())
+        {
+            foreach (var x in y)
+            {
+                i++;
+                <text>
+        var index = @i;
+        document.getElementById(index).className = "inputboxFinished";
+        document.getElementById(index).disabled = true;
+        </text>
+            }
+        }
+    }
+
+
+    $("#cheatButton").submit(function (event) {
+        @{ int countCh = 0;}
+
+        @foreach (var y in Model.GetMap_Matrix())
+            {
+                foreach (var x in y)
+                {
+                    countCh++;
+                    <text>
+        var c = @countCh;
+        </text>
+                    if (x != 0)
+                    {
+                        <text>
+        document.getElementById(c).value = x;
+        document.getElementById(c).disabled = true;
+        </text>
+            }
+            else
+            {
+                        <text>
+        document.getElementById(c).value = "";
+        document.getElementById(c).disabled = false;
+        </text>
+            }
+
+                        }
+                        }
+    });
+
+    $("#validateTarget").submit(function (event) {
+        event.preventDefault();
+        $.ajax({
+            type: "GET",
+            url: '@Url.Action("NewGame", "Home")',
+            contentType: "application/json; charset=utf-8",
+            async: false,
+            dataType: "json",
+            success: function (msg) {
+            },
+            error: function (e) {
+            }
+        });
+    });
+</script>
